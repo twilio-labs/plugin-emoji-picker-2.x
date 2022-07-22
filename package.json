@@ -1,0 +1,35 @@
+{
+  "name": "emoji-picker-plugin",
+  "author": {
+    "name": "Manne Hedlund",
+    "email": "mhedlund@twilio.com"
+  },
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
+    "postinstall": "flex-plugin pre-script-check"
+  },
+  "dependencies": {
+    "@twilio-paste/core": "^14.0.0",
+    "@twilio-paste/icons": "^8.0.2",
+    "@twilio/flex-plugin-scripts": "5.1.2",
+    "react": "^18.0.2",
+    "react-dom": "^18.0.2",
+    "react-virtualized": "^9.22.3"
+  },
+  "devDependencies": {
+    "@twilio-labs/svg-to-react": "^2.1.1",
+    "@twilio/flex-ui": "2.0.0-beta.1",
+    "@types/react": "^18.0.2",
+    "@types/react-dom": "^18.0.2",
+    "@types/react-virtualized": "^9.21.21",
+    "react-test-renderer": "17.0.2",
+    "typescript": "^4"
+  },
+  "resolutions": {
+    "immer": "^9.0.15",
+    "@types/react": "^18.0.2",
+    "@types/react-dom": "^18.0.2"
+  }
+}
