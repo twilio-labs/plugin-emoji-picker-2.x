@@ -18,7 +18,7 @@ It is also worth noting that Flex UI uses the 'Inter' font for displaying messag
 Clone the repository and enter the main directory:
 
 ```bash
-cd emoji-picker-2.x-plugin
+cd plugin-emoji-picker-2.x
 ```
 
 Make sure you have [Node.js](https://nodejs.org) as well as [`npm`](https://npmjs.com). We support Node >= 10.12 (and recommend the _even_ versions of Node). Afterwards, install the dependencies by running:
