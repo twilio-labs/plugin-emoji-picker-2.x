@@ -1,6 +1,6 @@
 import { CSSProperties, useEffect, useState } from "react";
 import { Box, Input, Tab, TabList, Tabs, Text } from "@twilio-paste/core";
-import { List } from "react-virtualized";
+import { List as VirtualizedList } from "@enykeev/react-virtualized";
 import { SearchIcon } from "@twilio-paste/icons/esm/SearchIcon";
 
 import {
@@ -81,7 +81,7 @@ const EmojiWindow = (props: EmojiWindowProps) => {
     return (
         <Box {...emojiListContainerStyles}>
             <Tabs selectedId={selectedCategory} variant="fitted">
-                <TabList aria-label="State hook tabs">
+                <TabList aria-label="Emoji category tabs">
                     <Tab
                         id={EmojiCategory.all}
                         onClick={() => setSelectedCategory(EmojiCategory.all)}
@@ -156,7 +156,7 @@ const EmojiWindow = (props: EmojiWindowProps) => {
                     onChange={(event) => setSearchInput(event.target.value)}
                 />
             </Box>
-            <List
+            <VirtualizedList
                 width={PICKER_WIDTH}
                 height={PICKER_HEIGHT}
                 rowHeight={EMOJI_HEIGHT}
