@@ -12,18 +12,16 @@
   "dependencies": {
     "@twilio-paste/core": "^14.0.0",
     "@twilio-paste/icons": "^8.0.2",
-    "@twilio/flex-plugin-scripts": "5.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "@enykeev/react-virtualized": "^9.22.4-mirror.1"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "@enykeev/react-virtualized": "^9.22.4-mirror.1",
+    "@twilio/flex-plugin-scripts": "6.0.2"
   },
   "devDependencies": {
     "@twilio-labs/svg-to-react": "^2.1.1",
     "@twilio/flex-ui": "2.0.0-beta.1",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2",
     "@types/react-virtualized": "^9.21.21",
-    "react-test-renderer": "17.0.2",
-    "typescript": "^4"
+    "typescript": "^4",
+    "react-test-renderer": "17.0.2"
   }
 }
