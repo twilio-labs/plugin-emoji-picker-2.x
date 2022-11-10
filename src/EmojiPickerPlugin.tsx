@@ -20,9 +20,11 @@ export default class EmojiPickerPlugin extends FlexPlugin {
    * @param manager { Flex.Manager }
    */
     init(flex: typeof Flex, manager: Flex.Manager) {
-        const appendToInputText = async (conversationSid: string, body: string) => {
-            const currentInputText = manager.store.getState().flex.chat.conversationInput[conversationSid].inputText;
-            await flex.Actions.invokeAction("SetInputText", { conversationSid, body: currentInputText + body });
+        const injectEmoji = async (conversationSid: string, emoji: string) => {
+            const { inputText, selectionStart, selectionEnd } = manager.store.getState().flex.chat.conversationInput[conversationSid];
+            const newInputText = inputText.slice(0, selectionStart) + emoji + inputText.slice(selectionEnd);
+
+            await flex.Actions.invokeAction("SetInputText", { conversationSid, body: newInputText });
         };
 
         flex.setProviders({
@@ -61,7 +63,7 @@ export default class EmojiPickerPlugin extends FlexPlugin {
             /* @ts-ignore */ 
             <EmojiPicker
                 key="EmojiPicker"
-                appendToInputText={appendToInputText} />,
+                injectEmoji={injectEmoji} />,
             options
         );
     }

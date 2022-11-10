@@ -8,7 +8,7 @@ import EmojiWindow from "../EmojiWindow/EmojiWindow";
 
 interface EmojiPickerProps {
     conversationSid: string;
-    appendToInputText: (conversationSid: string, body: string) => Promise<void>;
+    injectEmoji: (conversationSid: string, emoji: string) => Promise<void>;
 }
 
 const EmojiPicker = (props: EmojiPickerProps) => {
@@ -33,7 +33,7 @@ const EmojiPicker = (props: EmojiPickerProps) => {
     }, [emojiPickerRef]);
 
     const onEmojiClick = (nativeEmoji: string) => {
-        props.appendToInputText(props.conversationSid, nativeEmoji);
+        props.injectEmoji(props.conversationSid, nativeEmoji);
         setIsOpen(false);
     };
 

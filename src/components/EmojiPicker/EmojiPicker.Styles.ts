@@ -11,7 +11,8 @@ export const emojiIconContainerStyles = (isHighlighted: boolean): BoxStyleProps 
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "sizeSquare90",
-    height: "sizeSquare90",
-    backgroundColor: isHighlighted ? "colorBackgroundInverseStrong" : "transparent"
+    width: "sizeSquare100",
+    height: "sizeSquare100",
+    borderRadius: "borderRadiusCircle",
+    backgroundColor: isHighlighted ? "colorBackgroundStrong" : "transparent"
 });
