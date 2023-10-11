@@ -15,7 +15,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "@enykeev/react-virtualized": "^9.22.4-mirror.1",
-    "@twilio/flex-plugin-scripts": "6.0.2"
+    "@twilio/flex-plugin-scripts": "6.2.1"
   },
   "devDependencies": {
     "@twilio-labs/svg-to-react": "^2.1.1",
